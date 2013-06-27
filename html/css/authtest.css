@@ -1,0 +1,18 @@
+
+body {
+	padding: 1em;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.02em;
+	margin: 0.2em 0;
+}
+
+h3 {
+	font-size: 1.3em;
+	line-height: 1.1em;
+}
+
+.grey { color: #999; }
+
