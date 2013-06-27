@@ -55,6 +55,12 @@ for permission to use a certificate at the site.
 	<li><a href="http://aprsdroid.org/" target="_blank">APRSdroid</a></li>
 </ul>
 
+<p><b>Want to use Amateur Radio Certificates on your site?</b></p>
+
+<p>It's easy. The Apache configuration and PHP scripts for this site
+are <a href="https://github.com/hessu/ham-cert-web-demo" target="_blank">available
+for viewing and downloading on github</a>.</p>
+
       </div>
     </div>
   </div>
