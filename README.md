@@ -19,7 +19,7 @@ Three settings are needed in Apache to enable cert auth:
 
  * <code>SSLCACertificateFile authtest-trusted-ca.pem</code> specifies
    the CAs we trust (Logbook of the World root certificate, and any
-   others we'd like to add later)
+   others we'll want to add later).
  * <code>SSLVerifyClient optional</code> says that we would like to have
    a client certificate on this site, but it's not required. Set this to
    <code>SSLVerifyClient require</code> if you wish to absolutely require
