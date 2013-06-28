@@ -15,6 +15,13 @@ It's a pretty standard SSL apache setup, nothing magical in there.  It's
 currently set up to not require a client certificate, but optionally use one
 if the client has one that is trusted by us.
 
+It's probably a good idea to start by setting up a regular SSL web service
+without client certificate authentication.  The Internet is full of
+examples, Apache on Linux has good example configs, and you can get a free
+server certificate that is accepted by all current browsers from
+[StartSSL](http://www.startssl.com/).  Once that's working, proceed with the
+authentication.
+
 Three settings are needed in Apache to enable cert auth:
 
  * <code>SSLCACertificateFile authtest-trusted-ca.pem</code> specifies
@@ -34,6 +41,16 @@ Nothing magical in there either, it should be easy to translate to other
 languages.  The PHP stuff is only a demonstration of displaying and
 utilizing certificate contents (callsign...) in an application, it's not
 needed for the actual authentication.
+
+Bonus hint: It's a good idea to set up a regular HTTP service on port 80,
+and make it redirect users to the SSL service.  This makes it easier for
+users to find the service - they'll get to the right place even when they
+forget to type in the https protocol prefix.
+
+<pre><code>
+    RewriteEngine On
+    RewriteRule ^(.*) https://www.example.com$1            [R=301,L]
+</code></pre>
 
 Heikki Hannikainen, OH7LZB
 
