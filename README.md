@@ -30,7 +30,9 @@ Three settings are needed in Apache to enable cert auth:
  * <code>SSLVerifyClient optional</code> says that we would like to have
    a client certificate on this site, but it's not required. Set this to
    <code>SSLVerifyClient require</code> if you wish to absolutely require
-   a valid client certificate on your site.
+   a valid client certificate on your site. This demo site wishes to display
+   something even if an user doesn't have a cert installed, so authentication
+   needs to be optional.
  * <code>SSLVerifyDepth 4</code> specifies we accept 4 levels of CAs.
    LoTW currently uses 1 intermediate production CA to sign the end-user
    certificates, so the minimum setting is probably 2 right now.
