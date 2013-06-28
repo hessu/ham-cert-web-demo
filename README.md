@@ -47,8 +47,7 @@ and make it redirect users to the SSL service.  This makes it easier for
 users to find the service - they'll get to the right place even when they
 forget to type in the https protocol prefix.
 
-<pre><code>
-    RewriteEngine On
+<pre><code>    RewriteEngine On
     RewriteRule ^(.*) https://www.example.com$1            [R=301,L]
 </code></pre>
 
